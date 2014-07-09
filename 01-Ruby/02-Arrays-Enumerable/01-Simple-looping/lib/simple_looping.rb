@@ -17,9 +17,10 @@ def sum_with_for(min,max)
   #CONSTRAINT: you should use a for..end structure
 num = min
 sum = 0
-for num in min..max
-  puts sum(num += 1)
-end
+  for num in min..max
+  sum = num + sum
+  num = sum + 1
+  end
 sum
 end
 

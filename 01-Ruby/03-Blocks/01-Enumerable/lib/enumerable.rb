@@ -38,11 +38,18 @@ add_bang(["arg", "agd", "fgdq"])
 def product(array)
   # TODO: Calculate the product of an array of numbers.
   #       You should use of Enumerable#reduce
+  array.reduce(:*)
 end
 
 def sorted_pairs(array)
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
   #       You should make use of Enumerable#each_slice
+  new_array = []
+  array.each_slice(2) do |pairs|
+    p pairs
+    new_array << pairs.sort
+  end
+   return new_array
 end
 
-
+sorted_pairs(["hjlb", "jmhjkmh", "jkmn", "hjlj"])

@@ -45,10 +45,7 @@ def sorted_pairs(array)
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
   #       You should make use of Enumerable#each_slice
   new_array = []
-  array.each_slice(2) do |pairs|
-    p pairs
-    new_array << pairs.sort
-  end
+  array.each_slice(2) {|pairs| new_array << pairs.sort}
    return new_array
 end
 

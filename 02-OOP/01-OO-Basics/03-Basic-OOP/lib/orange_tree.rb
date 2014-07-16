@@ -6,13 +6,15 @@ class OrangeTree
     @age = 0
     @height = 0
     @fruits = 0
-    @dead = false
   end
 
   def dead?
-    @dead
     if @age >= 100
-      return @dead = true
+      return true
+    elsif @age < (50..100).to_a.sample
+      return false
+    else
+       true
     end
   end
 
@@ -20,29 +22,21 @@ class OrangeTree
     @age += 1
 
     if (0..10).cover?(@age)
-       return @height += 1
+      @height += 1
     end
 
-    #probabilité
-    #if (50..100).cover?(@age)
-    #     return #????
-    # end
-
-
-    if
-      (5..10).cover?(@age)
+    if @age > 5 && @age <= 10
       @fruits = 100
     elsif
-      (10..15).cover?(@age)
+      @age > 10 && @age <= 15
       @fruits = 200
     else
       @fruits = 0
     end
-
-   end
-
+  end
 
   def pick_a_fruit!
-    return @fruits -= 1
+    @fruits -= 1
   end
+
 end

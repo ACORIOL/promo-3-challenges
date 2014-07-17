@@ -25,7 +25,16 @@ class Restaurant
   #@average_rating = @all_ratings.inject(:+) / @all_ratings.size
   #end
 
-
   #TODO: implement #filter_by_city and #rate methods
+
+  def self.filter_by_city(restaurants, city)
+    restaurants.select do |restaurant|
+      if restaurant.city == city
+        true
+      else
+        false
+      end
+    end
+   end
 
 end

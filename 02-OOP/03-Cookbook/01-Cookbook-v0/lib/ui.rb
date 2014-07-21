@@ -1,73 +1,29 @@
-class UI
-  TASKS = {
-    list: "- List all recipes [list]",
-    add:  "- Add a new recipe [add]",
-    del:  "- Delete a recipe [del]",
-    exit: "- Exit [exit]"
-  }
+require_relative "cookbook"
+require_relative "controller"
+require "csv"
 
-  def initialize(controller)
-    @controller = controller
-    @running = true
-  end
+class Ui
 
-  def list
-    # TODO: call the appropriate controller method with the proper argument(s)
-    # TODO: format and display the retrieved data in a numbered list
-  end
+#faut initialize ?
 
-  def add
-    # TODO: ask the user a recipe name
-    # TODO: call the appropriate controller method with the proper argument(s)
-  end
-
-  def del
-    # TODO: ask the user a recipe index
-    # TODO: call the appropriate controller method with the proper argument(s)
-  end
-
-  def exit
-    # TODO: exit the program
-    # Hint: Take a look at the display method !
-  end
-
-  def user_input
-    # TODO: Get the user input and return it
-    # [OPTIONAL] You can think of the case where the user
-    # enters a wrong choice.
-  end
-
-  def display
-    puts "-- Welcome to the CookBook --"
-
-    while @running
-      print "\n"
-
-      display_tasks
-      dispatch(user_input)
-
-      print "\n"
+  def display_recipes(recipes)
+    recipes.each_with_index do |recipe, index|
+        puts "#{index} - #{recipe.name}"
     end
   end
 
-  ###
-  ##  You don't need to modify the following methods !
-  ###
-  def display_tasks
-    puts "What do you want to do? \n"
-    puts TASKS.values
+  def ask_for_new_recipe
+    puts "name of the recipe?"
+    name = gets.chomp
+    puts "description of the recipe?"
+    description = gets.chomp
+    puts "Thanks for adding #{name}!"
   end
 
-  # The dispatch method takes a String or a Symbol as an argument
-  # and calls the method with the same name.
-  #
-  #  Examples:
-  #
-  #   dispatch(:del) => Will call the `del` method in the current class
-  #   dispatch("add") => Will call the `add` method in the current class
-  #
-  # To understand this, read the doc : http://ruby-doc.org/core-2.1.1/Object.html#method-i-send
-  def dispatch(task)
-    self.send(task.to_sym)
+  def ask_to_remove_a_recipe(name)
+    puts "which recipe do you want to remove?"
+    recipe_to_delete = gets.chomp.to_i #what if is not in the list?
   end
+
 end
+

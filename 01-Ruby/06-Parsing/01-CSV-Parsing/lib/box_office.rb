@@ -14,21 +14,21 @@ def most_successful(number, max_year, file_name)
     movies << movie
   end
 
-  movies_before = all_movies_before(movies, max_year)
-  sorted_movies = movies_before_sorted(movies_before)
+  movies_before = get_movies_before(movies, max_year)
+  sorted_movies = sorted_movies(movies_before)
 
   sorted_movies.take(number).each { |movie|
     puts movie.name
   }
 end
 
-def all_movies_before(movies, max_year)
+def get_movies_before(movies, max_year)
   movies.select do |movie|
     movie.year < max_year
   end
 end
 
-def movies_before_sorted(movies) #pourquoi pas movies before
+def sorted_movies(movies)
   movies.sort_by do |movie|
     -movie.earnings
   end

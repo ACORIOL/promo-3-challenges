@@ -33,7 +33,7 @@ end
 
 def update_post(db, id, name)
 	#TODO: update a post's name in your db
-  db.execute("UPDATE blog SET name = #{name} WHERE id = #{id} ")
+  puts db.execute("UPDATE blog SET name = '#{name}' WHERE id = #{id} ")
 end
 
 def delete_posts(db)

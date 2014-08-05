@@ -1,3 +1,8 @@
+.racer_table {
+  margin-top: 100px;
+  margin-left: 10px;
+}
+
 .racer_table td {
   background-color: white;
   height: 20px;
@@ -5,6 +10,16 @@
 }
 
 .racer_table td.active {
-  background-color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.racer_table .player1 td.active {
+  background-image: url('../img/player_1.png');
+}
+
+.racer_table .player2 td.active {
+  background-image: url('../img/player_2.png');
 }
 

@@ -1,0 +1,26 @@
+/*.black {
+  background-color: black;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+*/
+
+/* POUR CENTRER donner a image hauteur relative et ensuite positionner modale */
+.img {
+  text-align: center;
+}
+
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  text-align: center;
+}
+
+.modal img {
+  width: 80%;
+}

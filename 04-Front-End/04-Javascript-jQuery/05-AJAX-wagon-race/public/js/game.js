@@ -1,6 +1,7 @@
 var start = Date.now(),
     player1_name,
     player2_name;
+    gride_size = 10;
 
 function time_elapsed() {
     var end = Date.now(),
@@ -37,10 +38,9 @@ function forward(row) {
   }
  }
 
-
 $(function() {
   var session_id,
-      start_button = $('#start-btn'),
+      start_button = $('#button'),
       form = $('#form'),
       player1 = $('#player1'),
       player2 = $('#player2');

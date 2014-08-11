@@ -1,20 +1,36 @@
+#form {
+  padding: 20px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  color: #027DB3;
+  margin: auto;
+}
+
+#player1_hint {
+  padding-bottom: 10px;
+}
+
+#player2_hint {
+  padding-bottom: 10px;
+}
+
+.btn {
+ /* position: center;*/
+  padding-top: 20px;
+  border-radius: 50%;
+  /*text-align: center;*/
+  background-color: #027DB3;
+  border-color: #027DB3;
+  color:#FFFDE4;
+}
+
 #table {
   margin-top: 100px;
   margin-left: 10px;
   border-width: 1px;
   border-style: solid;
-  border-color:black;
+  border-color: black;
 }
-
-/*#button {
-  margin-top: 100px;
-  margin-left: 100px;
-}
-
-#form {
-  margin-top: 100px;
-  margin-left: 100px;
-}*/
 
 #table td {
   background-color: white;

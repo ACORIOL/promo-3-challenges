@@ -5,31 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JAJAX Wagon Race</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
   </head>
 
   <body>
 
-    <button id="start-btn" type="button" class="start-hidden">Start a new Game!</button>
-
-    <form id="form" class="start-hidden" method="post">
-      <p>
-        <label for="Player1-name">Name Player1:</label>
-        <input type="text" name="player1_name" id="player1_name" >
-      </p>
-      <p>
-        <label for="Player2-name">Name Player2:</label>
-        <input type="text" name="player2_name" id="player2_name">
-      </p>
-      <button id="submit-btn" type="submit">Submit</button>
+    <form id="form">
+      <div>
+        <p>What about a little wagon race ?!</p>
+      </div>
+      <div id="player1_hint">
+        <input id="player1" type="text" name="player1_name" placeholder="player1"/>
+      </div>
+      <div id="player1_hint">
+        <input id="player2" type="text" name="player2_name" placeholder="player2"/>
+      </div>
+      <div>
+        <input type="submit" class="btn btn.lg" id="button" value="GO!"/>
+      </div>
     </form>
 
+   <!--  <p>
+       ["player1" + "player2"]
+    </p> -->
+
     <table id="table" class="start-hidden">
-      <tr id="player1" class="player1">
+        <tr id="player1" class="player1">
         <td class="active"></td>
         <td></td>
         <td></td>
